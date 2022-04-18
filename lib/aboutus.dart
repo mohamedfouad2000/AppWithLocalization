@@ -14,6 +14,9 @@ class aboutus extends StatelessWidget {
     return BlocProvider(create: (BuildContext context) { return homecubit();   },
     child: BlocConsumer<homecubit,homestates>(builder: (BuildContext context, state) { return Scaffold(
       appBar: AppBar(
+        actions: [
+          Text('data'),
+        ],
         title: Text("${getLang(context, "aboutus")}"),
       ),
       body: Container(
